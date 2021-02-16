@@ -1,9 +1,12 @@
 
             <?php
             include_once "header.php";
+            ?>
+                
+            <a href="users.php">Uporabniki</a>
+            <br />
             
-           echo '<h1>Pozdrav</h1>';
-
+            <?php
            include_once "footer.php";
            ?>
 
