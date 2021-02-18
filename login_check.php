@@ -16,9 +16,12 @@ if($stmt->rowCount() == 1)
  {
     $user = $stmt->fetch(); 
 
-    if (password_verify($pass,$user['pass']))
+    if (password_verify($pass,$user['pass'])) //first name, last name, id, pass
     {
-        $_SESSION['logged']= 1;
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['admin'] = $user['admin'];
+        $_SESSION['first_name'] = $user['first_name'];
+        $_SESSION['Last_name'] = $user['last_name'];
         header("Location: index.php");
         die();
     }
